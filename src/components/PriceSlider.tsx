@@ -8,6 +8,7 @@ interface Service {
   price: number;
   description: string;
   duration: string;
+  image: string;
 }
 
 const services: Service[] = [
@@ -16,42 +17,48 @@ const services: Service[] = [
     name: 'Депиляция голеней',
     price: 1200,
     description: 'Удаление нежелательных волос с голеней с использованием высококачественного воска.',
-    duration: '30 мин'
+    duration: '30 мин',
+    image: '/placeholder.svg'
   },
   {
     id: 2,
     name: 'Депиляция рук',
     price: 900,
     description: 'Профессиональная депиляция рук до локтя, безболезненно и эффективно.',
-    duration: '20 мин'
+    duration: '20 мин',
+    image: '/placeholder.svg'
   },
   {
     id: 3,
     name: 'Депиляция подмышечных впадин',
     price: 700,
     description: 'Гладкая кожа подмышек надолго, профессиональный подход и забота.',
-    duration: '15 мин'
+    duration: '15 мин',
+    image: '/placeholder.svg'
   },
   {
     id: 4,
     name: 'Глубокое бикини',
     price: 1800,
     description: 'Полное удаление волос в зоне бикини с максимальным комфортом.',
-    duration: '40 мин'
+    duration: '40 мин',
+    image: '/placeholder.svg'
   },
   {
     id: 5,
     name: 'Комплекс: ноги + руки',
     price: 1900,
     description: 'Выгодное сочетание двух процедур за одно посещение.',
-    duration: '50 мин'
+    duration: '50 мин',
+    image: '/placeholder.svg'
   },
   {
     id: 6,
     name: 'Полный комплекс',
     price: 3500,
     description: 'Депиляция ног, рук, подмышек и бикини за одно посещение.',
-    duration: '90 мин'
+    duration: '90 мин',
+    image: '/placeholder.svg'
   }
 ];
 
@@ -88,7 +95,8 @@ const PriceSlider = () => {
   return (
     <section id="services" className="py-16 bg-secondary/50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Наши услуги</h2>
+        <h2 className="text-3xl font-bold text-center mb-2">Наши услуги</h2>
+        <p className="text-center text-muted-foreground mb-12">Профессиональные процедуры для вашей красоты</p>
         
         <div className="relative">
           <button 
@@ -105,16 +113,32 @@ const PriceSlider = () => {
           >
             {services.map((service) => (
               <div key={service.id} className="price-slide px-12">
-                <Card className="h-full">
-                  <CardContent className="pt-6">
-                    <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-4">
-                      <h3 className="text-xl font-semibold">{service.name}</h3>
-                      <div className="flex items-center gap-4">
-                        <span className="text-sm text-muted-foreground">{service.duration}</span>
-                        <span className="text-2xl font-bold text-primary">{service.price} ₽</span>
+                <Card className="h-full overflow-hidden">
+                  <CardContent className="p-0">
+                    <div className="flex flex-col md:flex-row h-full">
+                      <div className="w-full md:w-1/2 relative">
+                        <img 
+                          src={service.image} 
+                          alt={service.name} 
+                          className="w-full h-full object-cover aspect-square md:aspect-auto min-h-[200px]" 
+                        />
+                        <span className="absolute top-4 right-4 bg-accent text-accent-foreground font-bold px-3 py-1 rounded-full">
+                          {service.price} ₽
+                        </span>
+                      </div>
+                      <div className="w-full md:w-1/2 p-6 flex flex-col justify-between">
+                        <div>
+                          <div className="flex justify-between items-center mb-3">
+                            <h3 className="text-xl font-semibold">{service.name}</h3>
+                            <span className="text-sm text-muted-foreground">{service.duration}</span>
+                          </div>
+                          <p className="text-muted-foreground">{service.description}</p>
+                        </div>
+                        <button className="mt-4 px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors w-full md:w-auto self-start">
+                          Записаться
+                        </button>
                       </div>
                     </div>
-                    <p className="text-muted-foreground">{service.description}</p>
                   </CardContent>
                 </Card>
               </div>
@@ -135,8 +159,8 @@ const PriceSlider = () => {
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}
-              className={`h-2 w-2 rounded-full transition-colors ${
-                index === currentIndex ? 'bg-primary' : 'bg-muted'
+              className={`h-2 w-10 rounded-full transition-colors ${
+                index === currentIndex ? 'bg-accent' : 'bg-muted'
               }`}
               aria-label={`Перейти к услуге ${index + 1}`}
             />
