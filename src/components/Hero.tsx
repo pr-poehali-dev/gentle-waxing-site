@@ -10,7 +10,7 @@ const Hero = () => {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-2">
             Кабинет депиляции <span className="text-accent gold-gradient">Нежность</span>
           </h1>
-          <p className="text-xl md:text-2xl text-primary italic mb-6">
+          <p className="text-xl md:text-2xl text-blue-DEFAULT italic mb-6">
             Прикосновение к совершенству
           </p>
           <p className="text-lg md:text-xl text-muted-foreground mb-8">
@@ -19,12 +19,12 @@ const Hero = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link to="#booking">
-              <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90">
+              <Button size="lg" className="w-full sm:w-auto bg-blue-DEFAULT text-foreground hover:bg-blue-dark">
                 Записаться онлайн
               </Button>
             </Link>
             <Link to="#services">
-              <Button variant="outline" size="lg" className="w-full sm:w-auto border-accent text-accent hover:bg-accent/10">
+              <Button variant="outline" size="lg" className="w-full sm:w-auto border-gold-DEFAULT text-gold-dark hover:bg-gold-light/20">
                 Посмотреть услуги
               </Button>
             </Link>

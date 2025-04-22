@@ -93,7 +93,7 @@ const PriceSlider = () => {
   }, []);
   
   return (
-    <section id="services" className="py-16 bg-secondary/50">
+    <section id="services" className="py-16 bg-blue-light/30">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-2">Наши услуги</h2>
         <p className="text-center text-muted-foreground mb-12">Профессиональные процедуры для вашей красоты</p>
@@ -101,7 +101,7 @@ const PriceSlider = () => {
         <div className="relative">
           <button 
             onClick={goToPrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-background/80 p-2 rounded-full shadow-md hover:bg-primary hover:text-primary-foreground transition-colors"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-background/80 p-2 rounded-full shadow-md hover:bg-blue-DEFAULT hover:text-foreground transition-colors"
             aria-label="Предыдущая услуга"
           >
             <ArrowLeft className="h-6 w-6" />
@@ -113,7 +113,7 @@ const PriceSlider = () => {
           >
             {services.map((service) => (
               <div key={service.id} className="price-slide px-12">
-                <Card className="h-full overflow-hidden">
+                <Card className="h-full overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                   <CardContent className="p-0">
                     <div className="flex flex-col md:flex-row h-full">
                       <div className="w-full md:w-1/2 relative">
@@ -122,7 +122,7 @@ const PriceSlider = () => {
                           alt={service.name} 
                           className="w-full h-full object-cover aspect-square md:aspect-auto min-h-[200px]" 
                         />
-                        <span className="absolute top-4 right-4 bg-accent text-accent-foreground font-bold px-3 py-1 rounded-full">
+                        <span className="absolute top-4 right-4 bg-gold-DEFAULT text-foreground font-bold px-3 py-1 rounded-full">
                           {service.price} ₽
                         </span>
                       </div>
@@ -134,7 +134,7 @@ const PriceSlider = () => {
                           </div>
                           <p className="text-muted-foreground">{service.description}</p>
                         </div>
-                        <button className="mt-4 px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors w-full md:w-auto self-start">
+                        <button className="mt-4 px-4 py-2 bg-blue-DEFAULT text-foreground rounded-md hover:bg-blue-dark transition-colors w-full md:w-auto self-start">
                           Записаться
                         </button>
                       </div>
@@ -147,7 +147,7 @@ const PriceSlider = () => {
           
           <button 
             onClick={goToNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-background/80 p-2 rounded-full shadow-md hover:bg-primary hover:text-primary-foreground transition-colors"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-background/80 p-2 rounded-full shadow-md hover:bg-blue-DEFAULT hover:text-foreground transition-colors"
             aria-label="Следующая услуга"
           >
             <ArrowRight className="h-6 w-6" />
@@ -160,7 +160,7 @@ const PriceSlider = () => {
               key={index}
               onClick={() => setCurrentIndex(index)}
               className={`h-2 w-10 rounded-full transition-colors ${
-                index === currentIndex ? 'bg-accent' : 'bg-muted'
+                index === currentIndex ? 'bg-gold-DEFAULT' : 'bg-muted'
               }`}
               aria-label={`Перейти к услуге ${index + 1}`}
             />

@@ -13,8 +13,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 210 10% 20%;
 
-    --primary: 210 80% 60%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 200 80% 70%;
+    --primary-foreground: 210 10% 20%;
 
     --secondary: 210 30% 96%;
     --secondary-foreground: 210 10% 30%;
@@ -22,7 +22,7 @@
     --muted: 210 20% 95%;
     --muted-foreground: 210 10% 50%;
 
-    --accent: 45 80% 60%;
+    --accent: 45 70% 75%;
     --accent-foreground: 210 10% 20%;
 
     --destructive: 0 84.2% 60.2%;
@@ -30,18 +30,18 @@
 
     --border: 210 20% 90%;
     --input: 210 20% 90%;
-    --ring: 45 80% 60%;
+    --ring: 45 70% 75%;
 
     --radius: 0.5rem;
 
     --sidebar-background: 210 30% 98%;
     --sidebar-foreground: 210 10% 30%;
-    --sidebar-primary: 210 80% 60%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 45 80% 60%;
+    --sidebar-primary: 200 80% 70%;
+    --sidebar-primary-foreground: 210 10% 20%;
+    --sidebar-accent: 45 70% 75%;
     --sidebar-accent-foreground: 210 10% 20%;
     --sidebar-border: 210 20% 90%;
-    --sidebar-ring: 45 80% 60%;
+    --sidebar-ring: 45 70% 75%;
   }
 
   .dark {
@@ -54,7 +54,7 @@
     --popover: 210 30% 10%;
     --popover-foreground: 210 10% 90%;
 
-    --primary: 210 80% 60%;
+    --primary: 200 80% 60%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 210 30% 15%;
@@ -63,7 +63,7 @@
     --muted: 210 30% 15%;
     --muted-foreground: 210 10% 60%;
 
-    --accent: 45 80% 60%;
+    --accent: 45 70% 65%;
     --accent-foreground: 210 10% 90%;
 
     --destructive: 0 62.8% 30.6%;
@@ -71,16 +71,16 @@
 
     --border: 210 30% 20%;
     --input: 210 30% 20%;
-    --ring: 45 80% 60%;
+    --ring: 45 70% 65%;
     
     --sidebar-background: 210 30% 10%;
     --sidebar-foreground: 210 10% 90%;
-    --sidebar-primary: 210 80% 60%;
+    --sidebar-primary: 200 80% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 45 80% 60%;
+    --sidebar-accent: 45 70% 65%;
     --sidebar-accent-foreground: 210 10% 90%;
     --sidebar-border: 210 30% 20%;
-    --sidebar-ring: 45 80% 60%;
+    --sidebar-ring: 45 70% 65%;
   }
 }
 
@@ -114,7 +114,7 @@
 
 /* Gold Gradient for special elements */
 .gold-gradient {
-  background: linear-gradient(135deg, #f6e27a 0%, #d2ac47 50%, #edc967 100%);
+  background: linear-gradient(135deg, #f8e7a1 0%, #e6c980 50%, #f2dcab 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

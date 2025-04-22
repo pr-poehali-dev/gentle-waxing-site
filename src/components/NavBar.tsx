@@ -16,7 +16,7 @@ const NavBar = () => {
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center space-x-2">
             <span className="text-2xl font-bold">
-              <span className="text-primary">Кабинет</span>{" "}
+              <span className="text-blue-DEFAULT">Кабинет</span>{" "}
               <span className="gold-gradient">Нежность</span>
             </span>
           </Link>
@@ -36,20 +36,20 @@ const NavBar = () => {
 
           {/* Desktop menu */}
           <nav className="hidden md:flex items-center space-x-6">
-            <Link to="/" className="text-foreground hover:text-primary transition-colors">
+            <Link to="/" className="text-foreground hover:text-blue-DEFAULT transition-colors">
               Главная
             </Link>
-            <Link to="#services" className="text-foreground hover:text-primary transition-colors">
+            <Link to="#services" className="text-foreground hover:text-blue-DEFAULT transition-colors">
               Услуги
             </Link>
-            <Link to="#promotions" className="text-foreground hover:text-primary transition-colors">
+            <Link to="#promotions" className="text-foreground hover:text-blue-DEFAULT transition-colors">
               Акции
             </Link>
-            <Link to="#about" className="text-foreground hover:text-primary transition-colors">
+            <Link to="#about" className="text-foreground hover:text-blue-DEFAULT transition-colors">
               О нас
             </Link>
             <Link to="#booking">
-              <Button variant="default" className="bg-primary hover:bg-primary/90">
+              <Button variant="default" className="bg-blue-DEFAULT text-foreground hover:bg-blue-dark">
                 Записаться
               </Button>
             </Link>
@@ -63,7 +63,7 @@ const NavBar = () => {
               <li>
                 <Link
                   to="/"
-                  className="block py-2 text-foreground hover:text-primary transition-colors"
+                  className="block py-2 text-foreground hover:text-blue-DEFAULT transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Главная
@@ -72,7 +72,7 @@ const NavBar = () => {
               <li>
                 <Link
                   to="#services"
-                  className="block py-2 text-foreground hover:text-primary transition-colors"
+                  className="block py-2 text-foreground hover:text-blue-DEFAULT transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Услуги
@@ -81,7 +81,7 @@ const NavBar = () => {
               <li>
                 <Link
                   to="#promotions"
-                  className="block py-2 text-foreground hover:text-primary transition-colors"
+                  className="block py-2 text-foreground hover:text-blue-DEFAULT transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Акции
@@ -90,7 +90,7 @@ const NavBar = () => {
               <li>
                 <Link
                   to="#about"
-                  className="block py-2 text-foreground hover:text-primary transition-colors"
+                  className="block py-2 text-foreground hover:text-blue-DEFAULT transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   О нас
@@ -102,7 +102,7 @@ const NavBar = () => {
                   className="block py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <Button variant="default" className="w-full bg-primary hover:bg-primary/90">
+                  <Button variant="default" className="w-full bg-blue-DEFAULT text-foreground hover:bg-blue-dark">
                     Записаться
                   </Button>
                 </Link>
